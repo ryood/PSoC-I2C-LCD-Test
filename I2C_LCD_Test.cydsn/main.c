@@ -41,7 +41,7 @@
                 }while(0)
 					
 /* LCDのコントラストの設定 */
-uint8 contrast = 0b110000;	// 3.0V時 数値を上げると濃くなります。
+uint8 contrast = 0b100000;	// 3.0V時 数値を上げると濃くなります。
 							// 2.7Vでは0b111000くらいにしてください。。
 							// コントラストは電源電圧，温度によりかなり変化します。実際の液晶をみて調整してください。
 
@@ -49,14 +49,14 @@ uint32 LCD_Write(uint8 *buffer)
 {
 	uint32 status = TRANSFER_ERROR;
 	
-	I2CM_I2CMasterWriteBuf(I2C_LCD_ADDR, buffer, PACKET_SIZE, I2CM_I2C_MODE_COMPLETE_XFER);
-	
+    I2CM_I2CMasterWriteBuf(I2C_LCD_ADDR, buffer, PACKET_SIZE, I2CM_I2C_MODE_COMPLETE_XFER);
+    
 	while (0u == (I2CM_I2CMasterStatus() & I2CM_I2C_MSTAT_WR_CMPLT))
     {
         /* Waits until master completes write transfer */
     }
-	
-	/* Displays transfer status */
+
+    /* Displays transfer status */
     if (0u == (I2CM_I2C_MSTAT_ERR_XFER & I2CM_I2CMasterStatus()))
     {
         RGB_LED_ON_GREEN;
@@ -76,7 +76,7 @@ uint32 LCD_Write(uint8 *buffer)
     }
 
     (void) I2CM_I2CMasterClearStatus();
-	
+	   
 	return (status);
 }
 
@@ -121,7 +121,7 @@ void LCD_Clear()
 
 void LCD_SetPos(uint32 x, uint32 y)
 {
-	LCD_Cmd(x + y * 0x40);
+	LCD_Cmd(0b10000000 | (x + y * 0x40));
 }
 
 // （主に）文字列を連続送信します。
@@ -135,22 +135,30 @@ void LCD_Puts(char8 *s)
 int main()
 {
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+    CyGlobalIntEnable;
+    
 	I2CM_Start();
 	CyDelay(500);
+    
+    // LCDをRESET
+    LCD_RESET_Write(0u);
+    CyDelay(1);
+    LCD_RESET_Write(1u);
+    CyDelay(10);
     
     LCD_Init();
     LCD_Clear();
     
 	LCD_Puts("PSoC I2C LCD");
 	
-	LCD_SetPos(0, 1);
+	LCD_SetPos(1, 1);
     LCD_Puts("Demonstration");
 
-    CyGlobalIntEnable;
-    
+
     for(;;)
     {
         /* Place your application code here. */
+        
     }
 }
 

@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.241ms
+Loading plugins phase: Elapsed time ==> 0s.238ms
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p D:\Users\gizmo\Documents\PSoC\I2C_LCD_Test\I2C_LCD_Test.cydsn\I2C_LCD_Test.cyprj -d CY8C4245AXI-483 -s D:\Users\gizmo\Documents\PSoC\I2C_LCD_Test\I2C_LCD_Test.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.723ms
+Elaboration phase: Elapsed time ==> 1s.702ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.042ms
+HDL generation phase: Elapsed time ==> 0s.043ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Users\gizmo
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Tue Jan 27 18:45:04 2015
+Fri Jan 30 12:46:15 2015
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 I2C_LCD_Test.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Tue Jan 27 18:45:04 2015
+Fri Jan 30 12:46:15 2015
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\..\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\..\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
@@ -83,7 +83,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Users\gizmo
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Tue Jan 27 18:45:04 2015
+Fri Jan 30 12:46:15 2015
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -110,7 +110,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Users\gizmo
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Tue Jan 27 18:45:04 2015
+Fri Jan 30 12:46:15 2015
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -158,6 +158,8 @@ Aliasing \I2CM:tmpOE__scl_net_0\ to \I2CM:tmpOE__sda_net_0\
 Aliasing \I2CM:Net_747\ to \I2CM:Net_459\
 Aliasing tmpOE__LED_RED_net_0 to \I2CM:tmpOE__sda_net_0\
 Aliasing tmpOE__LED_GREEN_net_0 to \I2CM:tmpOE__sda_net_0\
+Aliasing tmpOE__LED_BLUE_net_0 to \I2CM:tmpOE__sda_net_0\
+Aliasing tmpOE__LCD_RESET_net_0 to \I2CM:tmpOE__sda_net_0\
 Removing Lhs of wire \I2CM:Net_652\[3] = \I2CM:Net_459\[2]
 Removing Lhs of wire \I2CM:Net_452\[4] = \I2CM:Net_459\[2]
 Removing Lhs of wire \I2CM:Net_676\[5] = \I2CM:Net_459\[2]
@@ -175,9 +177,11 @@ Removing Lhs of wire \I2CM:Net_739\[33] = zero[17]
 Removing Lhs of wire \I2CM:Net_747\[34] = zero[17]
 Removing Lhs of wire tmpOE__LED_RED_net_0[57] = one[21]
 Removing Lhs of wire tmpOE__LED_GREEN_net_0[64] = one[21]
+Removing Lhs of wire tmpOE__LED_BLUE_net_0[71] = one[21]
+Removing Lhs of wire tmpOE__LCD_RESET_net_0[78] = one[21]
 
 ------------------------------------------------------
-Aliased 0 equations, 17 wires.
+Aliased 0 equations, 19 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -201,14 +205,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\bin/warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Users\gizmo\Documents\PSoC\I2C_LCD_Test\I2C_LCD_Test.cydsn\I2C_LCD_Test.cyprj -dcpsoc3 I2C_LCD_Test.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.579ms
+Warp synthesis phase: Elapsed time ==> 0s.573ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.1.0.1570, Family: PSoC3, Started at: Tuesday, 27 January 2015 18:45:04
+cyp3fit: V3.1.0.1570, Family: PSoC3, Started at: Friday, 30 January 2015 12:46:16
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=D:\Users\gizmo\Documents\PSoC\I2C_LCD_Test\I2C_LCD_Test.cydsn\I2C_LCD_Test.cyprj -d CY8C4245AXI-483 I2C_LCD_Test.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.024ms
+Design parsing phase: Elapsed time ==> 0s.016ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -235,6 +239,82 @@ Design Equations
     ------------------------------------------------------------
     Pin listing
     ------------------------------------------------------------
+
+    Pin : Name = LCD_RESET(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => LCD_RESET(0)__PA ,
+            pad => LCD_RESET(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = LED_BLUE(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => LED_BLUE(0)__PA ,
+            pad => LED_BLUE(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = LED_GREEN(0)
         Attributes:
@@ -430,7 +510,7 @@ Technology mapping summary
 Resource Type                 : Used : Free :  Max :  % Used
 ============================================================
 Digital clock dividers        :    0 :    4 :    4 :   0.00%
-Pins                          :    6 :   30 :   36 :  16.67%
+Pins                          :    8 :   28 :   36 :  22.22%
 UDB Macrocells                :    0 :   32 :   32 :   0.00%
 UDB Unique Pterms             :    0 :   64 :   64 :   0.00%
 UDB Datapath Cells            :    0 :    4 :    4 :   0.00%
@@ -449,20 +529,20 @@ TCPWM Blocks                  :    0 :    4 :    4 :   0.00%
 Serial Communication Blocks   :    1 :    1 :    2 :  50.00%
 Segment LCD Blocks            :    0 :    1 :    1 :   0.00%
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.388ms
-Tech mapping phase: Elapsed time ==> 0s.413ms
+Technology Mapping: Elapsed time ==> 0s.379ms
+Tech mapping phase: Elapsed time ==> 0s.411ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.0100709s
+Elapsed time ==> 0.0098377s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.028ms
+Analog Placement phase: Elapsed time ==> 0s.025ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0017929 secs
+Route success=True, Iterations=1 Elapsed=0.0011293 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.002ms
+Analog Routing phase: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -473,7 +553,7 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.114ms
+Analog Code Generation phase: Elapsed time ==> 0s.086ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
@@ -492,7 +572,7 @@ PLD Packing: Elapsed time ==> 0s.000ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.011ms
+Partitioning: Elapsed time ==> 0s.010ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
 Annealing: Elapsed time ==> 0s.001ms
@@ -568,7 +648,85 @@ Pin : Name = LED_GREEN(0)
     {
     }
 
+[IoId=3]: 
+Pin : Name = LED_BLUE(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => LED_BLUE(0)__PA ,
+        pad => LED_BLUE(0)_PAD );
+    Properties:
+    {
+    }
+
 Port 1 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = LCD_RESET(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => LCD_RESET(0)__PA ,
+        pad => LCD_RESET(0)_PAD );
+    Properties:
+    {
+    }
+
 [IoId=6]: 
 Pin : Name = LED_RED(0)
     Attributes:
@@ -764,8 +922,10 @@ Port Configuration report
 Port | Pin | Fixed |      Type |       Drive Mode |          Name | Connections
 -----+-----+-------+-----------+------------------+---------------+-------------------
    0 |   2 |     * |      NONE |         CMOS_OUT |  LED_GREEN(0) | 
+     |   3 |     * |      NONE |         CMOS_OUT |   LED_BLUE(0) | 
 -----+-----+-------+-----------+------------------+---------------+-------------------
-   1 |   6 |     * |      NONE |         CMOS_OUT |    LED_RED(0) | 
+   1 |   0 |     * |      NONE |         CMOS_OUT |  LCD_RESET(0) | 
+     |   6 |     * |      NONE |         CMOS_OUT |    LED_RED(0) | 
 -----+-----+-------+-----------+------------------+---------------+-------------------
    3 |   0 |     * |      NONE |    OPEN_DRAIN_LO | \I2CM:scl(0)\ | FB(\I2CM:Net_580\)
      |   1 |     * |      NONE |    OPEN_DRAIN_LO | \I2CM:sda(0)\ | FB(\I2CM:Net_581\)
@@ -774,17 +934,17 @@ Port | Pin | Fixed |      Type |       Drive Mode |          Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.000ms
-Digital Placement phase: Elapsed time ==> 0s.406ms
+Digital Placement phase: Elapsed time ==> 0s.427ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.405ms
+Digital Routing phase: Elapsed time ==> 0s.400ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
 Bitstream and API generation phase: Elapsed time ==> 0s.085ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.029ms
+Bitstream verification phase: Elapsed time ==> 0s.027ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in I2C_LCD_Test_timing.html.
@@ -794,11 +954,11 @@ Static timing analysis phase: Elapsed time ==> 0s.143ms
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.131ms
+Design database save phase: Elapsed time ==> 0s.125ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 1s.801ms
+cydsfit: Elapsed time ==> 1s.768ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 1s.841ms
-API generation phase: Elapsed time ==> 0s.435ms
+Fitter phase: Elapsed time ==> 1s.809ms
+API generation phase: Elapsed time ==> 0s.454ms
 Dependency generation phase: Elapsed time ==> 0s.003ms
 Cleanup phase: Elapsed time ==> 0s.000ms
